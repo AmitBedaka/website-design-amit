@@ -1,2 +1,6 @@
-# Keep large local video files out of GitHub Pages commits.
-assets/videos/*
+# These two source videos exceed GitHub's standard 100 MiB file limit.
+assets/videos/glue-dispensing.mp4
+assets/videos/rgbd-inspection.wmv
+
+# Temporary presentation screenshots are retained locally only.
+assets/images/
