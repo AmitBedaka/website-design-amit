@@ -1,0 +1,10 @@
+create-pages:
+  stage: deploy
+  image: alpine:3.20
+  script:
+    - mkdir public
+    - cp index.html styles.css script.js public/
+    - cp -r assets public/
+  pages: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
