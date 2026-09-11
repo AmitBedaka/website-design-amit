@@ -1,0 +1,2 @@
+# Keep large local video files out of GitHub Pages commits.
+assets/videos/*
