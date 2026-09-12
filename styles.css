@@ -124,6 +124,15 @@
   .research,.publications{padding-left:var(--site-gutter)!important;padding-right:var(--site-gutter)!important}
 }
 
+/* Contact completes the alternating dark-section rhythm used by Research and Publications. */
+.contact{width:100%;margin:0;background:var(--ink);color:#f5f5ef;padding:112px var(--site-gutter)!important}
+.contact .section-label span,.contact .kicker,.contact-links i{color:var(--lime)}
+.contact-lede,.contact-links span{color:#bfc7c3}
+.contact-links{border-color:rgba(255,255,255,.25)}
+.contact-links a{color:#f5f5ef;border-color:rgba(255,255,255,.25)}
+.contact-links a:hover strong{color:var(--lime)}
+@media(max-width:760px){.contact{padding:80px 16px!important}}
+
 /* Publication and patent identifiers use original vector marks, not third-party logos. */
 .publication-heading{display:flex;align-items:center;gap:10px}
 .publication-mark{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border:1px solid rgba(216,242,83,.65);color:var(--lime);flex:0 0 25px}
