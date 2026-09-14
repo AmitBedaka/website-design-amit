@@ -143,4 +143,5 @@
 .patent-list strong{font-size:.9rem;letter-spacing:-.02em}
 .project-patent{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;color:var(--muted);font:400 .72rem var(--mono);line-height:1.55}
 .project-patent strong{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.label-d{bottom:15%;right:8%}
 @media(max-width:760px){.patent-list li{grid-template-columns:34px minmax(0,1fr)}.publication-mark{width:23px;height:23px;flex-basis:23px}}
