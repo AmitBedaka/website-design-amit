@@ -3,4 +3,5 @@ assets/videos/glue-dispensing.mp4
 assets/videos/rgbd-inspection.wmv
 
 # Temporary presentation screenshots are retained locally only.
-assets/images/
+assets/images/*
+!assets/images/glue-dispensing-cad-interface.png
