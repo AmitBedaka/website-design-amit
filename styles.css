@@ -145,3 +145,54 @@
 .project-patent strong{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.06em}
 .label-d{bottom:15%;right:8%}
 @media(max-width:760px){.patent-list li{grid-template-columns:34px minmax(0,1fr)}.publication-mark{width:23px;height:23px;flex-basis:23px}}
+@media(min-width:761px){.hero{min-height:calc(100svh - 220px);padding:clamp(12px,1.7vh,24px) 0 50px}.hero-grid{grid-template-columns:1.1fr .9fr;gap:clamp(4rem,7vw,10rem)}.hero h1{font-size:clamp(3.3rem,5.55vw,5.9rem);max-width:850px}.hero-visual{height:430px}.hero-foot{align-items:center;margin-top:54px}}
+@media(min-width:761px){.hero-foot{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;color:var(--muted);font:400 .65rem var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-top:75px;width:100%;transform:translateY(-72px)}.hero-foot>span:first-child{justify-self:start}.hero-foot>span:nth-child(2){justify-self:center}.hero-foot>a{justify-self:end;color:var(--ink);text-decoration:none}.hero-foot>a span{color:var(--teal);font-size:1.1rem;margin-left:5px}}
+@media(min-width:761px){.hero{min-height:calc(100svh - 220px)}.hero-foot{transform:none;position:relative;top:0;margin-top:42px}}
+
+/* =========================================================
+   HERO FOOTER — FINAL ALIGNMENT FIX
+   Keeps:
+   - Based in Barcelona on the left
+   - Researcher · Engineer · Builder centered
+   - Scroll to discover on the right
+   All three share the same hero/site content boundaries.
+   ========================================================= */
+@media (min-width: 761px) {
+  .hero-foot {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    margin-top: 42px;
+    position: relative;
+    top: 0;
+    transform: none;
+    color: var(--muted);
+    font: 400 .65rem var(--mono);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .hero-foot > span:first-child {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .hero-foot > span:nth-child(2) {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .hero-foot > a {
+    justify-self: end;
+    text-align: right;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .hero-foot > a span {
+    color: var(--teal);
+    font-size: 1.1rem;
+    margin-left: 5px;
+  }
+}

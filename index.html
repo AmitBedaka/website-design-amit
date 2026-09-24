@@ -8,7 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260912-contact" />
+    <link rel="stylesheet" href="styles.css?v=20260924-compact-hero-v11" />
+    <style>
+      @media (min-width:761px){
+        .hero{min-height:calc(100svh - 220px);padding:clamp(70px,calc(6.25vh + 8px),80px) 0 50px}
+        .hero-grid{grid-template-columns:1.1fr .9fr;gap:clamp(4rem,7vw,10rem)}
+        .hero h1{font-size:clamp(3.3rem,5.55vw,5.9rem);max-width:850px}
+        .hero-visual{height:430px}
+        .hero-foot{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;width:100%;margin-top:42px;transform:none;position:relative;top:0}
+        .hero-foot>span:first-child{justify-self:start}
+        .hero-foot>span:nth-child(2){justify-self:center}
+        .hero-foot>a{justify-self:end}
+      }
+      .hero-speaking{display:grid;grid-template-columns:28px minmax(0,1fr);gap:11px;align-items:center;max-width:720px;margin-top:26px;padding:12px 0 10px;border-top:1px solid var(--line);color:var(--ink)}
+      .hero-speaking-icon{display:grid;place-items:center;width:24px;height:24px;color:var(--teal)}
+      .hero-speaking-icon svg{display:block;width:24px;height:24px}
+      .hero-speaking-copy{display:grid;gap:3px;min-width:0}
+      .hero-speaking-label{color:var(--teal);font:500 .58rem var(--mono);letter-spacing:.09em;text-transform:uppercase}
+      .hero-speaking-copy strong{font-size:.74rem;line-height:1.35;letter-spacing:-.01em}
+      .hero-speaking-date{color:var(--muted);font:400 .61rem var(--mono);letter-spacing:.04em}
+      @media (max-width:760px){.hero-speaking{max-width:none;margin-top:22px}.hero-speaking-copy strong{font-size:.7rem}}
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -29,13 +49,17 @@
       <section id="home" class="hero section">
         <div class="hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow"><span></span> ROBOTICS · AUTOMATION · MANUFACTURING</p>
+            <p class="eyebrow">ROBOTICS · AUTOMATION · MANUFACTURING</p>
             <h1>Engineering intelligence into <em>real-world</em> machines.</h1>
             <p class="hero-lede">I am <strong>Amit Kumar Bedaka</strong>, a Robotics Research Scientist &amp; Engineer developing practical robotic systems for industrial automation and advanced manufacturing.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">→</span></a>
               <!-- Replace assets/Amit-Kumar-Bedaka-CV.pdf with your actual CV file. -->
               <a class="text-link" href="Amit_Kumar_Bedaka.pdf" download="Amit_Kumar_Bedaka_CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-speaking" role="note" aria-label="Recent speaking">
+              <span class="hero-speaking-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 3v4M17 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg></span>
+              <span class="hero-speaking-copy"><span class="hero-speaking-label">Recent speaking</span><strong>Invited Expert Speaker · Bio-ESTaTE, IIITDM Kancheepuram</strong><span class="hero-speaking-date">23 September 2026 · India</span></span>
             </div>
           </div>
           <div class="hero-visual reveal" aria-label="Robotics systems diagram showing autonomy, precision, perception, and integration" role="img">
@@ -45,7 +69,7 @@
             <p class="visual-label label-a" style="top:32%;right:2%">AUTONOMY</p><p class="visual-label label-b" style="bottom:9%;left:44%">PERCEPTION</p><p class="visual-label label-c" style="top:65%;left:76%">PRECISION</p><p class="visual-label label-d" style="top:19%;left:34%">INTEGRATION</p>
           </div>
         </div>
-        <div class="hero-foot reveal"><span>Based in Barcelona</span><span>Researcher · Engineer · Builder</span><a href="#about">Scroll to discover <span>↓</span></a></div>
+        <div class="hero-foot reveal" style="align-items:center"><span>Based in Barcelona</span><span>Researcher · Engineer · Builder</span><a href="#about" style="display:inline-flex;align-items:center;gap:6px">Scroll to discover <span>↓</span></a></div>
       </section>
 
       <section id="about" class="section about">
