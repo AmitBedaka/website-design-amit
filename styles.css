@@ -21,9 +21,9 @@
   .research>.section-label{margin-left:0}
   .research .section-heading{max-width:930px}
   .research-list{max-width:980px}
-  .projects .section-heading{margin-left:0;max-width:none}
+  .projects .section-heading{margin-left:0;max-width:none;margin-bottom:28px}
   .projects .split-heading{grid-template-columns:minmax(0,1fr) minmax(255px,.32fr);gap:64px}
-  .projects .project-grid{margin-top:44px}
+  .projects .project-grid{margin-top:16px}
   .pub-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(255px,.32fr);align-items:end;gap:64px;margin-bottom:44px}
   .pub-intro>p{justify-self:end;margin:0 0 8px;max-width:310px}
   .publication-list{max-width:none}
