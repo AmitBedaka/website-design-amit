@@ -42,7 +42,7 @@
   .research>.section-label,
   .research .section-heading,
   .research .research-list{width:min(940px,100%);margin-left:0;margin-right:0}
-  .research>.section-label{margin-bottom:58px}
+  .research>.section-label{margin-bottom:42px}
   .research .section-heading{margin-bottom:58px}
   .research .section-heading h2{max-width:860px;font-size:clamp(2.5rem,4.1vw,4.2rem);line-height:1.01}
   .research .research-list{max-width:940px}
