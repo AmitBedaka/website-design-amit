@@ -25,7 +25,8 @@
         .hero.hero-has-highlights .hero-lede{max-width:600px;font-size:1rem;line-height:1.58}
         .hero.hero-has-highlights .hero-actions{margin-top:20px}
         .hero.hero-has-highlights .hero-visual{height:400px}
-        .hero.hero-has-highlights .hero-foot{margin-top:52px}
+        .hero.hero-has-highlights .hero-highlights{position:relative;top:20px}
+.hero.hero-has-highlights .hero-foot{margin-top:68px}
       }
       :root{--sticky-header-offset:76px}
       #home{scroll-margin-top:var(--sticky-header-offset)}
@@ -187,5 +188,28 @@
     </aside>
     <footer><p>© <span id="year"></span> Amit Kumar Bedaka</p><p>Designed for research in motion.</p><a href="#home">Back to top ↑</a></footer>
     <script src="script.js"></script>
-  </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cues = [...document.querySelectorAll('a')];
+    const scrollCue = cues.find((link) => /scroll\s+to\s+discover/i.test(link.textContent));
+    const backCue = cues.find((link) => /back\s+to\s+top/i.test(link.textContent));
+
+    if (!scrollCue || !backCue) return;
+
+    const scrollStyle = getComputedStyle(scrollCue);
+    ['fontFamily', 'fontSize', 'fontWeight', 'letterSpacing', 'lineHeight', 'textTransform'].forEach((property) => {
+      backCue.style[property] = scrollStyle[property];
+    });
+
+    [[scrollCue, 'SCROLL TO DISCOVER', '↓'], [backCue, 'BACK TO TOP', '↑']].forEach(([cue, label, arrow]) => {
+      cue.classList.add('nav-cue--matched');
+      cue.replaceChildren(document.createTextNode(label));
+      const icon = document.createElement('span');
+      icon.className = 'nav-cue-arrow';
+      icon.textContent = arrow;
+      cue.append(' ', icon);
+    });
+  });
+</script>
+</body>
 </html>
