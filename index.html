@@ -211,5 +211,21 @@
     });
   });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const wallPaintingTitle = [...document.querySelectorAll('h1, h2, h3')]
+      .find((heading) => /autonomous wall-painting robot/i.test(heading.textContent));
+    const projectLink = wallPaintingTitle && [...wallPaintingTitle.parentElement.querySelectorAll('a')]
+      .find((link) => /explore/i.test(link.textContent));
+
+    if (projectLink) {
+      projectLink.href = 'UR10e_Painting_LinkedIn.mp4';
+      projectLink.target = '_blank';
+      projectLink.rel = 'noopener';
+      projectLink.textContent = 'Watch demo ↗';
+      projectLink.setAttribute('aria-label', 'Watch the Autonomous Wall-Painting Robot demo');
+    }
+  });
+</script>
 </body>
 </html>
